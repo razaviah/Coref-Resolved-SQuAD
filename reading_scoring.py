@@ -42,7 +42,7 @@ random.shuffle(c)
 SAs, Qs = zip(*c)
 
 
-# train, dev, and test sets out of CRSNQD dataset
+# train, dev, and test sets out of CRSQUAD dataset
 X_train = SAs[:50000]
 X_dev = SAs[50000:56000]
 X_test = SAs[56000:]
@@ -62,7 +62,7 @@ with open('CRSQuAD_test_lists.txt', 'w', encoding="utf-8") as outfile:
     outfile.write("\n".join(str(q) for q in y_test))
 
 
-# extracting the train, dev, and test sets out of CRSNQD
+# extracting the train, dev, and test sets out of CRSQUAD
 with open('myData/para-dev.txt', 'w', encoding="utf-8") as outfile:
     outfile.write("\n".join(X_dev))
 
@@ -72,6 +72,7 @@ with open('myData/para-train.txt', 'w', encoding="utf-8") as outfile:
 with open('myData/para-test.txt', 'w', encoding="utf-8") as outfile:
     outfile.write("\n".join(X_test))
 
+# extracting the first question from the list of questions related to one sentence
 with open('myData/tgt-dev.txt', 'w', encoding="utf-8") as outfile:
     outfile.write("\n".join(q[0] for q in y_dev))
 
