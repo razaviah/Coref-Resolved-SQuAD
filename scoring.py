@@ -14,8 +14,7 @@ import nlgeval
 from nlgeval import NLGEval
 
 CRSQuAD_Q = open('CRSQuAD_Q_lists.txt', 'r')
-print([ast.literal_eval(line.strip("\n")) for line in CRSQuAD_Q.readlines()])
-CRSQuAD_Q = [json.loads(line.strip("\n")) for line in CRSQuAD_Q.readlines()]
+CRSQuAD_Q = [ast.literal_eval(line.strip("\n")) for line in CRSQuAD_Q.readlines()]
 
 CRSQuAD_SA = open('CRSQuAD_SA_lists.txt', 'r')
 CRSQuAD_SA = [line.strip("\n") for line in CRSQuAD_SA.readlines()]
@@ -27,7 +26,7 @@ hypothesis = open('hypothesis_test.txt', 'r')
 hypothesis = [line.strip("\n") for line in hypothesis.readlines()]
 
 references = open('CRSQuAD_test_lists.txt', 'r')
-references = [json.loads(line.strip("\n")) for line in references.readlines()]
+references = [ast.literal_eval(line.strip("\n")) for line in references.readlines()]
 
 print("REFERENCES: ", references[0:10])
 print("HYPOTHESIS: ", hypothesis[0:10])
