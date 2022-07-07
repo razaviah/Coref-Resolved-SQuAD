@@ -9,10 +9,12 @@ import collections
 import random
 
 from re import S
+import ast
 import nlgeval
 from nlgeval import NLGEval
 
 CRSQuAD_Q = open('CRSQuAD_Q_lists.txt', 'r')
+print([ast.literal_eval(line.strip("\n")) for line in CRSQuAD_Q.readlines()])
 CRSQuAD_Q = [json.loads(line.strip("\n")) for line in CRSQuAD_Q.readlines()]
 
 CRSQuAD_SA = open('CRSQuAD_SA_lists.txt', 'r')
