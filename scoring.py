@@ -24,16 +24,19 @@ CRSQuAD_SA = [line.strip("\n") for line in CRSQuAD_SA.readlines()]
 print("CRSQUAD_Q: ", CRSQuAD_Q[0:10])
 print("CRSQUAD_SA: ", CRSQuAD_SA[0:10])
 
+# reading the hypothesis file in format of "one sentence per line"
 hypothesis = open('hypothesis_test.txt', 'r')
 hypothesis = [line.strip("\n") for line in hypothesis.readlines()]
 
+# reading the references file in format of "one list per line"
 references = open('CRSQuAD_test_lists.txt', 'r')
 references = [ast.literal_eval(line.strip("\n")) for line in references.readlines()]
 
+# testing to see whether the refrences and hypothesis files are aligned or not
 print("REFERENCES: ", references[0:10])
 print("HYPOTHESIS: ", hypothesis[0:10])
 
-
+# getting the performance scores
 metrics_dict = nlgeval.compute_metrics(references, hypothesis)
 
 
