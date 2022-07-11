@@ -13,6 +13,8 @@ import ast
 import nlgeval
 from nlgeval import NLGEval
 
+nlgeval = NLGEval()
+
 CRSQuAD_Q = open('CRSQuAD_Q_lists.txt', 'r')
 CRSQuAD_Q = [ast.literal_eval(line.strip("\n")) for line in CRSQuAD_Q.readlines()]
 
@@ -32,7 +34,6 @@ print("REFERENCES: ", references[0:10])
 print("HYPOTHESIS: ", hypothesis[0:10])
 
 
-nlgeval = NLGEval()
 metrics_dict = nlgeval.compute_metrics(references, hypothesis)
 
 
