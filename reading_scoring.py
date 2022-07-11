@@ -53,6 +53,7 @@ y_test = Qs[56000:]
 
 
 # extracting the sentences and lists of references for predicted questions
+# in format of "one sentence per line" and "one list of questions per line"
 with open('CRSQuAD_Q_lists.txt', 'w', encoding="utf-8") as outfile:
     outfile.write("\n".join(str(q) for q in Qs))
 
