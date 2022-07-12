@@ -1,0 +1,7 @@
+source ENV/bin/activate
+
+module load gcc/9.3.0 arrow python/3.9 scipy-stack/2022a java/14.0.2
+
+pip3 install -r requirements_39.txt
+
+pip3 install git+https://github.com/Maluuba/nlg-eval.git@master
