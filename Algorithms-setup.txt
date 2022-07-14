@@ -1,11 +1,11 @@
-# BART:
+# BART Algorithm setup:
 
 # epoch number: 5
 # learning rate: 5* e-5
 # both batch sizes: 16
 # gradient step accumulation: 2
 
-# T5:
+# T5 Algorithm setup:
 
 # epoch number: 7 (1-10)
 # learning rate: 5 e-4 (e-1 - e-7)
