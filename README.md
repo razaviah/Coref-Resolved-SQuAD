@@ -7,5 +7,7 @@ The projects is currently in its starting phases and not much to write about rig
 
 ## Progress
 The coreferences are resolved to some point which can be found in the text files.
+
 I have not tested how it works yet in the question generation task but I will update this file as soon as I have the scores!
+
 I will upload the script used to resolve the coreferences after I made sure of its worth!
