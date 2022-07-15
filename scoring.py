@@ -49,6 +49,15 @@ references = [ast.literal_eval(line.strip("\n")) for line in references.readline
 print("REFERENCES: ", references[0:10])
 print("HYPOTHESIS: ", hypothesis[0:10])
 
+# checking if the types of hypothesis and references files are okay or not 
+print('len references: ', len(references))
+print('len hypothesis: ', len(hypothesis))
+print('type references (should be list): ', type(references))
+print('type references[0] (should be list): ', type(references[0]))
+print('type references[0][0] (should be string): ', type(references[0][0]))
+print('type hypothesis (should be list): ', type(hypothesis))
+print('type hypothesis[0] (should be string): ', type(hypothesis[0]))
+
 # getting the performance scores
 metrics_dict = nlgeval.compute_metrics(references, hypothesis)
 
